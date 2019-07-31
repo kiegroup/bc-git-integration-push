@@ -19,7 +19,7 @@ This is a sample project that shows how to setup Business Central to automatical
 Clone this repository and build it locally, for this you need `Git`, `Maven` and `JDK 8`.
 
 ```shell
-$ git clone https://github.com/porcelli/bc-git-integration-push.git
+$ git clone https://github.com/kiegroup/bc-git-integration-push.git
 $ cd bc-git-integration-push
 $ mvn clean install
 $ mkdir -p $APP_SERVER_HOME/hooks/ && cp target/git-push-2.1-SNAPSHOT.jar $APP_SERVER_HOME/hooks/
