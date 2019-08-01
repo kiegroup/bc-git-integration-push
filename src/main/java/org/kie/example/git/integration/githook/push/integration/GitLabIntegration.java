@@ -17,6 +17,7 @@
 package org.kie.example.git.integration.githook.push.integration;
 
 import org.eclipse.jgit.transport.CredentialsProvider;
+import org.eclipse.jgit.transport.UsernamePasswordCredentialsProvider;
 import org.gitlab4j.api.GitLabApi;
 import org.gitlab4j.api.GitLabApiException;
 import org.kie.example.git.integration.githook.push.properties.GitRemoteProperties;
@@ -41,6 +42,7 @@ public class GitLabIntegration implements GitRemoteIntegration {
             LOGGER.info("Connecting using token");
             gitlab = new GitLabApi(props.getRemoteGitUrl(), props.getToken());
             groupId = resolveGroupId(props.getGitLabGroup());
+            credentialsProvider = new UsernamePasswordCredentialsProvider("", props.getToken());
         }
     }
 
